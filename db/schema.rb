@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180206094803) do
+ActiveRecord::Schema.define(version: 20180209195042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "elements", force: :cascade do |t|
+    t.string "element"
+    t.bigint "pokemon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pokemon_id"], name: "index_elements_on_pokemon_id"
+  end
 
   create_table "pokemons", force: :cascade do |t|
     t.string "Name"
@@ -22,4 +30,5 @@ ActiveRecord::Schema.define(version: 20180206094803) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "elements", "pokemons"
 end
