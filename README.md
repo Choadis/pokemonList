@@ -26,7 +26,7 @@ Because this is a tutorial, I didn't write any tests
 
 ## Authors
 
-* **Stefen Dahlgren** - *Initial work* - [PurpleBooth](https://github.com/Choadis)
+* **Stefen Dahlgren** - *Initial work* - [Github](https://github.com/Choadis)
 
 ## License
 
